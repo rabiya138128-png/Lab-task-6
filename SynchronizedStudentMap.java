@@ -31,7 +31,6 @@ public class SynchronizedStudentMap {
             return;
         }
 
-       
         System.out.println("--- Synchronized Map Results ---");
         System.out.println("Expected entries: " + expectedEntries);
         System.out.println("Actual entries:   " + synchronizedMap.size());
