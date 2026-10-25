@@ -3,6 +3,8 @@ import java.util.Map;
 
 public class StudentMarks {
     public static void main(String[] args) {
+        Map<String, String> studentMap = new HashMap<>();
+        
 
     }
 }
