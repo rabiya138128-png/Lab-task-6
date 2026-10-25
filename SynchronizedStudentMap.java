@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 public class SynchronizedStudentMap {
     public static void main(String[] args) throws InterruptedException {
+        Map<String, Integer> synchronizedMap = Collections.synchronizedMap(new HashMap<>());
 
     }
     
