@@ -23,6 +23,19 @@ public class ConcurrentStudentMap {
                 }
             });
         }
+        executor.shutdown();
+        boolean finished = executor.awaitTermination(10, TimeUnit.SECONDS);
+
+        long endTime = System.nanoTime();
+
+        if (!finished) {
+            executor.shutdownNow();
+            System.out.println("Tasks timed out.");
+            return;
+        }
+
+        Integer sampleValue = concurrentMap.get("Thread-2-500");
+        long timeTakenMs = (endTime - startTime) / 1_000_000;
 
     }
     
