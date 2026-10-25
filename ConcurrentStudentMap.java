@@ -8,7 +8,8 @@ public class ConcurrentStudentMap {
     static final int RECORDS_PER_THREAD = 1000;
 
     public static void main(String[] args) throws InterruptedException{
-        
+        ConcurrentHashMap<String, Integer> concurrentMap = new ConcurrentHashMap<>();
+        int expectedEntries = THREAD_COUNT * RECORDS_PER_THREAD;
     }
     
 }
