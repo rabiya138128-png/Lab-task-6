@@ -5,11 +5,11 @@ public class StudentMarks {
     public static void main(String[] args) {
         Map<String, Integer> studentMarks = new HashMap<>();
 
-        studentMarks.put("Alice", 85);
-        studentMarks.put("Bob", 92);
-        studentMarks.put("Charlie", 78);
-        studentMarks.put("David", 90);
-        studentMarks.put("Eva", 88);
+        studentMarks.put("Ali", 85);
+        studentMarks.put("Sara", 92);
+        studentMarks.put("Ayesha", 78);
+        studentMarks.put("Hira", 90);
+        studentMarks.put("Ahmed", 88);
 
         System.out.println("Student Marks:");
         for (Map.Entry<String, Integer> entry : studentMarks.entrySet()) {
