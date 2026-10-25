@@ -36,7 +36,12 @@ public class ConcurrentStudentMap {
 
         Integer sampleValue = concurrentMap.get("Thread-2-500");
         long timeTakenMs = (endTime - startTime) / 1_000_000;
-
+        System.out.println("--- ConcurrentHashMap Results ---");
+        System.out.println("Number of Threads: " + THREAD_COUNT);
+        System.out.println("Expected entries:  " + expectedEntries);
+        System.out.println("Actual entries:    " + concurrentMap.size());
+        System.out.println("Sample Retrieval:  Thread-2-500 -> " + sampleValue);
+        System.out.println("Execution Time:    " + timeTakenMs + " ms");
     }
     
 }
