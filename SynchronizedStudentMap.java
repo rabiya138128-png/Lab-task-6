@@ -22,6 +22,18 @@ public class SynchronizedStudentMap {
                 }
             });
         }
+        executor.shutdown();
+        boolean finished = executor.awaitTermination(5, TimeUnit.SECONDS);
 
+        if (!finished) {
+            executor.shutdownNow();
+            System.out.println("Tasks timed out.");
+            return;
+        }
+
+       
+        System.out.println("--- Synchronized Map Results ---");
+        System.out.println("Expected entries: " + expectedEntries);
+        System.out.println("Actual entries:   " + synchronizedMap.size());
     }
 }
